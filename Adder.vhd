@@ -1,17 +1,23 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.numeric_std.all;
-entity Adder is
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity Add is
     Port ( Op1 : in  STD_LOGIC_VECTOR (31 downto 0);
            Op2 : in  STD_LOGIC_VECTOR (31 downto 0);
-           Result : out  STD_LOGIC_VECTOR (31 downto 0));
-end Adder;
+           Salida : out  STD_LOGIC_VECTOR (31 downto 0):= (others => '0'));
+end Add;
 
-architecture Behavioral of Adder is
+architecture Behavioral of Add is
 
 begin
-Result <= std_logic_vector(unsigned(Op1) + unsigned(Op2));
+	process(op1,op2)
+		begin
+			Salida <= op1 + op2;
+	end process;
+
+
 
 end Behavioral;
 
