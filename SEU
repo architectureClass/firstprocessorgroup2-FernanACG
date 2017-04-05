@@ -7,7 +7,7 @@ entity S_E_U is
            SALIDA : out  STD_LOGIC_VECTOR (31 downto 0):= (others => '0'));
 end S_E_U;
 
-architecture arqS_E_U of S_E_U is
+architecture  Behavioral of S_E_U is
 
 begin
 	process(DATO)
@@ -18,5 +18,5 @@ begin
 				SALIDA<= "0000000000000000000" & DATO;
 			end if;
 	end process;
-end arqS_E_U;
+end  Behavioral;
 
