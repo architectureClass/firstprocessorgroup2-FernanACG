@@ -10,7 +10,7 @@ entity ALU is
            AluResult : out  STD_LOGIC_VECTOR (31 downto 0));
 end ALU;
 
-architecture arqALU of ALU is
+architecture Behavioral of ALU is
 
 begin
 
@@ -37,4 +37,4 @@ begin
 				AluResult <= "00000000000000000000000000000000";
 		end case;
 	end process;
-end arqALU;
+end Behavioral;
